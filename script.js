@@ -53,14 +53,12 @@ function inputCheck() {
       document.querySelector('.d').value += " — решений нет";
     }
 
-    table = document.querySelector('table');
-    td = document.createElement("td");
-    td.innerHTML = toTable;
-    tr = document.createElement("tr");
-    tr.appendChild(td);
-    table.appendChild(tr);
+    var table = document.querySelector('table');
+    var row = table.insertRow();
+    var answer = row.insertCell();
 
-    tr.addEventListener("click", c => {tr.remove()});
+    answer.appendChild(document.createTextNode(toTable));
+    answer.addEventListener("click", c =>{answer.remove()});
   }
   else {
     document.querySelector('.err').value = 'Ошибка ввода: неопознанные символы ';
