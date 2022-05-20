@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Калькулятор квадратных уравнений</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grid">
+
+      <form class="calculator">
+        <output class="err"></output>
+
+				<p class="equation">
+					<input type="text" class="cof a" placeholder=" " size="10"><label class="item A">A</label>x² +
+					<input type="text" class="cof b" placeholder=" " size="10"><label class="item B">B</label>x +
+					<input type="text" class="cof c" placeholder=" " size="10"><label class="item C">C</label> = 0
+				</p>
+
+        <button type="button" class="btn equal">=</button>
+				<button type="button" class="btn reset">Reset</button>
+
+      </form>
+
+      <div class="table">
+        <table class="history">
+          <caption>История</caption>
+        </table>
+      </div>
+
+      <div class="solve">
+        <output class='s d'></output>
+        <output class='s x1'></output>
+        <output class="s x2"></output>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

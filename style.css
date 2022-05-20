@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Arial";
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 70%;
+}
+
+.table {
+  grid-column: 2;
+  grid-row: 1 / -1;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.history {
+  position: absolute;
+  top: 5%;
+}
+
+.calculator {
+  position: relative;
+}
+
+.err {
+  position: absolute;
+  font-size: 14px;
+  top: 15%;
+  left: 26px;
+  color: #ff5757;
+}
+
+.equation {
+  font-size: 20px;
+  width: 563px;
+  position: absolute;
+  left: 26px;
+  top: 40%;
+}
+
+.cof {
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.item {
+  position: absolute;
+  z-index: -1;
+  color: #9e9e9e;
+  transition: 0.3s;
+}
+
+.A {
+  left: 68px;
+}
+
+.B {
+  right: 296px;
+}
+
+.C {
+  right: 115px;
+}
+
+.a:focus ~ .A,
+.a:not(:placeholder-shown) ~ .A {
+  top: -18px;
+  left: 70px;
+  font-size: 14px;
+  color: #e0e0e0;
+ }
+
+.b:focus ~ .B,
+.b:not(:placeholder-shown) ~ .B {
+  top: -18px;
+  right: 297px;
+  font-size:14px;
+  color: #e0e0e0;
+}
+
+.c:focus ~ .C,
+.c:not(:placeholder-shown) ~ .C {
+  top: -18px;
+  right: 117px;
+  font-size:14px;
+  color: #e0e0e0;
+}
+
+.btn {
+  position: absolute;
+  top: 58%;
+  width: 278px;
+  height: 22px;
+
+  border: none;
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+
+
+.equal {
+  left: 26px;
+}
+
+.reset {
+  right: 26px;
+}
+
+.solve {
+  display: grid;
+  padding: 10px 10px 10px 10px;
+  gap: 10px;
+}
+
+.s {
+  justify-self: center;
+  align-self: center;
+}
+
+.history tr:nth-child(odd) {background-color: #ecd9d9;}
+.history tr:nth-child(even){background:#e8e3d4;}  
