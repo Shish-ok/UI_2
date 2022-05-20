@@ -138,5 +138,10 @@
   align-self: center;
 }
 
-.history tr:nth-child(odd) {background-color: #ecd9d9;}
-.history tr:nth-child(even){background:#e8e3d4;}  
+.history tr:nth-child(odd){
+    background-color: #597dff;
+}
+
+.history tr:nth-of-type(even){
+    background: #bac9ff;
+}  
